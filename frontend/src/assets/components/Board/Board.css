@@ -1,0 +1,22 @@
+.board-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.open {
+    color: red;
+    border-style: solid;
+    border-color: red;
+}
+
+.in_progress {
+    color: yellow;
+    border-style: solid;
+    border-color: yellow;
+}
+
+.done {
+    color: green;
+    border-style: solid;
+    border-color: green;
+}
