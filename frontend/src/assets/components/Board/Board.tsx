@@ -4,10 +4,11 @@ import ToDoBox from "../ToDoBox/ToDoBox.tsx";
 
 type BoardProps = {
     toDo: ToDo[];
+    deleteData: (id: string) => void
 }
 
 export default function Board(props: BoardProps) {
-    const toDo = props.toDo;
+    const {toDo, deleteData} = props;
 
     return (
         <div className="board-container">
@@ -16,7 +17,7 @@ export default function Board(props: BoardProps) {
                     {toDo
                         .filter((todo) => todo.status === "OPEN")
                         .map((todo) => (
-                            <ToDoBox key={todo.id} task={todo} />
+                            <ToDoBox key={todo.id} task={todo} deleteData={deleteData}/>
                         ))}
             </div>
             <div className="in_progress">

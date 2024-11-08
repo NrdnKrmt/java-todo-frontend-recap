@@ -13,7 +13,6 @@ public record Todo(
         this(null, description, status);
     }
 
-
     public Todo withId(String id) {
         return new Todo(id, description, status);
     }
