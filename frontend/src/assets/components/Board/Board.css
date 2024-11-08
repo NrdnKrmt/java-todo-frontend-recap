@@ -1,4 +1,4 @@
-.board-container {
+.board-todo-container {
     display: flex;
     justify-content: space-around;
 }
